@@ -1,0 +1,17 @@
+
+kafka-config:
+  boot-strap-servers: http://localhost:9092
+  no-of-partitions: 1
+  replication-factor: 1
+  topic-name: test-topic
+
+kafka-producer-config:
+  key-serializer-class: org.apache.kafka.common.serialization.StringSerializer
+  value-serializer-class: org.apache.kafka.common.serialization.StringSerializer
+  compression-type: snappy
+  acks: all
+  batch-size: 16384
+  batch-size-boost-factor: 100
+  linger-ms: 5
+  request-timeout-ms: 6000
+  retry-count: 5
